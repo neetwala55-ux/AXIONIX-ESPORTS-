@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AXIONIX ESPORTS</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Orbitron', sans-serif;
+}
+
+body{
+background:#0D0D0D;
+color:white;
+overflow-x:hidden;
+}
+
+/* Animated Background */
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle at 30% 30%, #7B00FF22, transparent 40%),
+radial-gradient(circle at 70% 70%, #00F0FF22, transparent 40%);
+animation:moveBg 10s infinite alternate;
+z-index:-1;
+}
+
+@keyframes moveBg{
+0%{transform:translate(0,0);}
+100%{transform:translate(-5%, -5%);}
+}
+
+/* Navbar */
+nav{
+position:fixed;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav h2{
+color:#7B00FF;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00F0FF;
+}
+
+/* Hero Section */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+color:#7B00FF;
+text-shadow:0 0 20px #7B00FF;
+animation:fadeDown 1.5s ease;
+}
+
+.hero p{
+margin:20px 0;
+font-size:20px;
+color:#ccc;
+animation:fadeUp 1.5s ease;
+}
+
+.hero button{
+padding:15px 35px;
+background:#7B00FF;
+border:none;
+color:white;
+font-size:18px;
+border-radius:30px;
+cursor:pointer;
+box-shadow:0 0 20px #7B00FF;
+transition:0.3s;
+}
+
+.hero button:hover{
+box-shadow:0 0 40px #00F0FF;
+background:#00F0FF;
+color:black;
+}
+
+/* Sections */
+section{
+padding:100px 50px;
+text-align:center;
+}
+
+section h2{
+font-size:40px;
+margin-bottom:50px;
+color:#00F0FF;
+}
+
+/* Cards */
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:20px;
+width:250px;
+transition:0.4s;
+border:1px solid #222;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px #7B00FF;
+}
+
+/* Stats */
+.stats{
+display:flex;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.stat{
+font-size:30px;
+color:#7B00FF;
+}
+
+/* Footer */
+footer{
+padding:30px;
+text-align:center;
+background:#111;
+border-top:1px solid #222;
+}
+
+/* Animations */
+@keyframes fadeDown{
+from{opacity:0; transform:translateY(-50px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(50px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* Responsive */
+@media(max-width:768px){
+.hero h1{
+font-size:40px;
+}
+nav{
+padding:20px;
+}
+nav ul{
+gap:15px;
+}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<h2>AXIONIX</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#teams">Teams</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<div class="hero">
+<h1>AXIONIX ESPORTS</h1>
+<p>Dominate. Conquer. Repeat.</p>
+<button onclick="scrollToSection()">Join The Squad</button>
+</div>
+
+<section id="about">
+<h2>About Us</h2>
+<p>AXIONIX ESPORTS is a competitive gaming organization focused on domination, discipline, and digital excellence. We build champions and create legends.</p>
+</section>
+
+<section id="teams">
+<h2>Our Teams</h2>
+<div class="cards">
+<div class="card">
+<h3>BGMI</h3>
+<p>Elite battle squad dominating tournaments.</p>
+</div>
+<div class="card">
+<h3>Valorant</h3>
+<p>Tactical shooters with unstoppable aim.</p>
+</div>
+<div class="card">
+<h3>Content Creators</h3>
+<p>Entertainers building the AXIONIX community.</p>
+</div>
+</div>
+</section>
+
+<section id="achievements">
+<h2>Achievements</h2>
+<div class="stats">
+<div class="stat">🏆 10+ Tournaments</div>
+<div class="stat">👥 5K+ Community</div>
+<div class="stat">🎯 3 Major Wins</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Follow us on social media and join our journey.</p>
+<p>Instagram | YouTube | Discord</p>
+</section>
+
+<footer>
+© 2026 AXIONIX ESPORTS. All Rights Reserved.
+</footer>
+
+<script>
+function scrollToSection(){
+document.getElementById("about").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
